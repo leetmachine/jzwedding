@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import piggyBackImg from "../images/piggyback1.jpg";
+import faroutSmallImg from "../images/faroutSmall.jpg";
 import faroutBigImg from "../images/faroutBig.jpg";
 import rioVistaImg from "../images/riovista1.jpeg";
 
@@ -191,6 +192,7 @@ const IndexPage = () => {
   return (
     <>
       <title>Jenessa & Zach</title>
+      <link rel="preload" as="image" href={faroutSmallImg} />
       <link rel="preload" as="image" href={faroutBigImg} />
       <Header />
       <div id="home" className="backgroundImg"></div>
