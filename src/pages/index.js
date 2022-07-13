@@ -2,6 +2,7 @@ import * as React from "react";
 
 import piggyBackImg from "../images/piggyback1.jpg";
 import faroutBigImg from "../images/faroutBig.jpg";
+import rioVistaImg from "../images/riovista1.jpeg";
 
 import "normalize.css";
 import "../styles/app.scss";
@@ -34,18 +35,30 @@ const DetailSection = () => {
   return (
     <div className="sectionContainer" style={borderStyle("purple")}>
       <div>
-        <h1 id="details">Details</h1>
-        <h3>Venue:</h3>
+        <h1 id="details">Wedding Details</h1>
+        <h2>Venue</h2>
+        <h3>Rio Vista Wines</h3>
+        <a href="http://riovistawines.com">Rio Vista Wines Website</a>
+        <p>address: 24415 SR 97, Chelan, WA 98816</p>
+        <img src={rioVistaImg} alt="rio vista wines" />
         <p>
-          Our celebrations will be held at Rio Vista Wines, located at 24415
-          US-97, Chelan, WA 98816. The venue is about 10 miles out of Downtown
-          Chelan, or a 15-minute drive. There will be parking available onsite
-          for those who choose to drive, and we will be sharing more information
-          about shuttles closer to!
+          Our celebrations will be held at Rio Vista Wines on August 12, 2023.
+          The venue is about 10 miles out of Downtown Chelan, or a 15-minute
+          drive. There will be parking available onsite for those who choose to
+          drive, and we will be sharing information about shuttles as details
+          become available.
         </p>
       </div>
+    </div>
+  );
+};
+
+const TravelingSection = () => {
+  return (
+    <div style={borderStyle("red")}>
+      <h1 id="traveling">Traveling</h1>
       <div>
-        <h3>Flight Information:</h3>
+        <h2>Flying In</h2>
         <p>
           For our guests flying in, we recommend flying into Seattle-Tacoma
           International Airport. From there, it is roughly a 3.5-hour drive to
@@ -59,14 +72,6 @@ const DetailSection = () => {
           can be tricky to coordinate.
         </p>
       </div>
-    </div>
-  );
-};
-
-const TravelingSection = () => {
-  return (
-    <div style={borderStyle("red")}>
-      <h1 id="traveling">Traveling</h1>
       <h2>Hotels</h2>
       <div>
         <h3>Campbells Resort</h3>
@@ -196,6 +201,12 @@ const IndexPage = () => {
         <div className="centeredContentContainer">
           <img width="60%" src={piggyBackImg} alt="piggyback" />
         </div>
+        <p style={{ color: "red", fontWeight: "bold" }}>
+          We should add a sentimental blurb here like "We are so excited to
+          share this special moment with you...." and possibly a point of
+          contact for needs. like "Please reach out to Michelle or Sherry with
+          questions..."{" "}
+        </p>
       </main>
       <footer style={borderStyle("green")}>
         <p className=".preloadMe">Sites by Keegz</p>
