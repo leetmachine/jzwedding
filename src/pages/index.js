@@ -1,143 +1,176 @@
 import * as React from "react";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
+import piggyBackImg from "../images/piggyback1.jpg";
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
+import "normalize.css";
+import "../styles/app.scss";
+import "../styles/header.scss";
+import "../styles/background.scss";
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
+const borderStyle = (color) => {
+  return { border: `2px solid ${color}` };
 };
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-};
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-];
 
 // markup
+const Header = () => {
+  return (
+    <header style={borderStyle("blue")}>
+      <ul>
+        <li>
+          <a href="#home">HOME</a>
+        </li>
+        <li>
+          <a href="#details">WEDDING DETAILS</a>
+        </li>
+        <li>
+          <a href="#traveling">TRAVELING</a>
+        </li>
+      </ul>
+    </header>
+  );
+};
+
+const DetailSection = () => {
+  return (
+    <div className="sectionContainer" style={borderStyle("purple")}>
+      <div>
+        <h1 id="details">Details</h1>
+        <h3>Venue:</h3>
+        <span>
+          Our celebrations will be held at Rio Vista Wines, located at 24415
+          US-97, Chelan, WA 98816. The venue is about 10 miles out of Downtown
+          Chelan, or a 15-minute drive. There will be parking available onsite
+          for those who choose to drive, and we will be sharing more information
+          about shuttles closer to!
+        </span>
+      </div>
+      <div>
+        <h3>Flight Information:</h3>
+        <span>
+          For our guests flying in, we recommend flying into Seattle-Tacoma
+          International Airport. From there, it is roughly a 3.5-hour drive to
+          Lake Chelan.
+        </span>
+      </div>
+    </div>
+  );
+};
+
+const TravelingSection = () => {
+  return (
+    <div style={borderStyle("red")}>
+      <h1 id="traveling">Traveling</h1>
+      <h2>Hotels</h2>
+      <div>
+        <h3>Campbells Resort</h3>
+        <a href="https://campbellsresort.com/">Cambells Resort Website</a>
+        <span>
+          We will be securing a small block of hotel rooms at Campbell's later
+          on this year. If this is the spot that catches your attention, please
+          check back on October 1 for discount details.{" "}
+        </span>
+        <span>
+          Fun fact - Jenessa worked at Campbells for one summer in college!{" "}
+        </span>
+      </div>
+      <div>
+        <h3>Wapato Point</h3>
+        <a href="https://wapatopoint.com/">
+          Wapato Point – Resort on Lake Chelan
+        </a>
+      </div>
+      <div>
+        <h3>Lakeside Lodge</h3>
+        <a href="https://www.lakesidelodgeandsuites.com/?_ga=2.71457232.2139132414.1656561963-311620743.1656561963">
+          The Official Website of Lakeside Lodge and Suites at Lake Chelan, WA -
+          Lakeside Lodge and Suites
+        </a>
+        <span>
+          *Make sure to mention the Crippen/Gladstone Wedding when booking your
+          reservation to receive our block discount (while rooms last!).
+        </span>
+      </div>
+      <div>
+        <h3>Grandview On the Lake </h3>
+        <a href="https://windermerevacations.com/grandview/">
+          Grandview On the Lake | Lake Chelan Hotel & Condo | Waterfront & Pool
+          (windermerevacations.com)
+        </a>
+      </div>
+
+      <h2>Motels</h2>
+      <div>
+        <h3>Riverwalk Inn & Cafe</h3>
+        <a href="https://riverwalkinnchelan.com/">
+          River Walk Inn – Inn and Motel and Lake Chelan
+          (riverwalkinnchelan.com)
+        </a>
+      </div>
+      <div>
+        <h3>Apple Inn Motel</h3>
+        <a href="https://appleinnmotel.com/">
+          Apple Inn Motel in Lake Chelan – Hotels in Chelan
+        </a>
+      </div>
+      <div>
+        <h3>Deep Water Inn</h3>
+        <a href="https://deepwaterinn.com/">Deep Water Inn Website</a>
+      </div>
+
+      <h2>House Rentals</h2>
+      <div>
+        <h3>The Lookout</h3>
+        <a href="https://chelanlookout.com/renting-at-the-lookout/">
+          Renting at the Lookout - The Lookout (chelanlookout.com)
+        </a>
+        <span>
+          Our #1 recommendation! We highly recommend the rental homes available
+          in The Lookout. Houses range in accommodations from 2 to 14+ - perfect
+          for families or groups wishing to stay together!
+        </span>
+      </div>
+      <div>
+        <h3>Vacasa Vacation Rentals </h3>
+        <a href="https://www.vacasa.com/usa/Washington/Chelan/">
+          Chelan Vacation Rentals, House Rentals, Cabins | Vacasa
+        </a>
+      </div>
+      <div>
+        <h3>Worldmark Chelan - Lake House</h3>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g58395-d1544680-Reviews-WorldMark_Chelan_Lake_House-Chelan_Washington.html">
+          WORLDMARK CHELAN - LAKE HOUSE - Updated 2022 Prices & B&B Reviews (WA)
+          (tripadvisor.com)
+        </a>
+      </div>
+
+      <h2>Camping</h2>
+      <div>
+        <h3>Lakeshore RV Park</h3>
+        <a href="https://cityofchelan.us/departments/parks-recreation/rv-park/">
+          Lakeshore RV Park - City of Chelan
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>JZ Wedding</title>
-      <h1>JZ Wedding</h1>
-      <p>
-        Ho sup, dis is Zack. idk if you heard but I'm gettin married you
-        undastan? cheehuu! I goin set dis site up latahz, but fo now you can
-        save dat date my braddahz. no ack u no dis paina goin be one fo da
-        bookz!
-      </p>
-    </main>
+    <>
+      <title>Jenessa & Zach</title>
+      <Header />
+      <div id="home" className="backgroundImg"></div>
+      <main>
+        <DetailSection />
+        <TravelingSection />
+        <div className="centeredPhotoContainer">
+          <img width="60%" src={piggyBackImg} alt="piggyback" />
+        </div>
+      </main>
+      <footer style={borderStyle("green")}>
+        <span>Sites by Keegz</span>
+      </footer>
+    </>
   );
 };
 
