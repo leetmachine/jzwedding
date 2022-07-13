@@ -163,7 +163,14 @@ const IndexPage = () => {
       <main>
         <DetailSection />
         <TravelingSection />
-        <div className="centeredPhotoContainer">
+        <div className="centeredContentContainer">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1OBfjoivIRBO5C0roZVZI7YZL3bLTQac&ehbc=2E312F"
+            width="640"
+            height="480"
+          ></iframe>
+        </div>
+        <div className="centeredContentContainer">
           <img width="60%" src={piggyBackImg} alt="piggyback" />
         </div>
       </main>
