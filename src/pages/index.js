@@ -5,7 +5,6 @@ import piggyBackImg from "../images/piggyback1.jpg";
 import "normalize.css";
 import "../styles/app.scss";
 import "../styles/header.scss";
-import "../styles/background.scss";
 
 const borderStyle = (color) => {
   return { border: `2px solid ${color}` };

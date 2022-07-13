@@ -12,3 +12,13 @@ main {
     display: flex;
     justify-content: center;
 }
+
+.backgroundImg {
+    background: url('../images/farout1.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 70% 0;
+    height: 100vh;
+}
