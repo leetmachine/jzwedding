@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import piggyBackImg from "../images/piggyback1.jpg";
+import faroutBigImg from "../images/faroutBig.jpg";
 
 import "normalize.css";
 import "../styles/app.scss";
@@ -157,6 +158,7 @@ const IndexPage = () => {
   return (
     <>
       <title>Jenessa & Zach</title>
+      <link rel="preload" as="image" href={faroutBigImg} />
       <Header />
       <div id="home" className="backgroundImg"></div>
       <main>
@@ -167,6 +169,7 @@ const IndexPage = () => {
             src="https://www.google.com/maps/d/embed?mid=1OBfjoivIRBO5C0roZVZI7YZL3bLTQac&ehbc=2E312F"
             width="640"
             height="480"
+            title="JZ Chelan Interactive Map"
           ></iframe>
         </div>
         <div className="centeredContentContainer">
@@ -174,7 +177,7 @@ const IndexPage = () => {
         </div>
       </main>
       <footer style={borderStyle("green")}>
-        <span>Sites by Keegz</span>
+        <span className=".preloadMe">Sites by Keegz</span>
       </footer>
     </>
   );
