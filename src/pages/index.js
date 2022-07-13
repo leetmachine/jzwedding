@@ -36,21 +36,28 @@ const DetailSection = () => {
       <div>
         <h1 id="details">Details</h1>
         <h3>Venue:</h3>
-        <span>
+        <p>
           Our celebrations will be held at Rio Vista Wines, located at 24415
           US-97, Chelan, WA 98816. The venue is about 10 miles out of Downtown
           Chelan, or a 15-minute drive. There will be parking available onsite
           for those who choose to drive, and we will be sharing more information
           about shuttles closer to!
-        </span>
+        </p>
       </div>
       <div>
         <h3>Flight Information:</h3>
-        <span>
+        <p>
           For our guests flying in, we recommend flying into Seattle-Tacoma
           International Airport. From there, it is roughly a 3.5-hour drive to
           Lake Chelan.
-        </span>
+        </p>
+
+        <p>
+          Alternatively, you can fly into Pangborn Memorial Airport in
+          Wenatchee. It is roughly a 1-hour drive to Lake Chelan. Note that
+          connecting flights between Wenatchee and Seattle are very limited and
+          can be tricky to coordinate.
+        </p>
       </div>
     </div>
   );
@@ -64,14 +71,14 @@ const TravelingSection = () => {
       <div>
         <h3>Campbells Resort</h3>
         <a href="https://campbellsresort.com/">Cambells Resort Website</a>
-        <span>
+        <p>
           We will be securing a small block of hotel rooms at Campbell's later
           on this year. If this is the spot that catches your attention, please
           check back on October 1 for discount details.{" "}
-        </span>
-        <span>
+        </p>
+        <p>
           Fun fact - Jenessa worked at Campbells for one summer in college!{" "}
-        </span>
+        </p>
       </div>
       <div>
         <h3>Wapato Point</h3>
@@ -85,10 +92,10 @@ const TravelingSection = () => {
           The Official Website of Lakeside Lodge and Suites at Lake Chelan, WA -
           Lakeside Lodge and Suites
         </a>
-        <span>
+        <p>
           *Make sure to mention the Crippen/Gladstone Wedding when booking your
           reservation to receive our block discount (while rooms last!).
-        </span>
+        </p>
       </div>
       <div>
         <h3>Grandview On the Lake </h3>
@@ -123,11 +130,11 @@ const TravelingSection = () => {
         <a href="https://chelanlookout.com/renting-at-the-lookout/">
           Renting at the Lookout - The Lookout (chelanlookout.com)
         </a>
-        <span>
+        <p>
           Our #1 recommendation! We highly recommend the rental homes available
           in The Lookout. Houses range in accommodations from 2 to 14+ - perfect
           for families or groups wishing to stay together!
-        </span>
+        </p>
       </div>
       <div>
         <h3>Vacasa Vacation Rentals </h3>
@@ -154,6 +161,27 @@ const TravelingSection = () => {
   );
 };
 
+const MapSection = () => {
+  return (
+    <div>
+      <p>
+        We’ve put together this map to show a few different points of interest
+        to help you plan, including our venue, where the Gladstone house is, and
+        how far down the lake we recommend staying. Click on each pin to see
+        details.
+      </p>
+      <div className="centeredContentContainer">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1OBfjoivIRBO5C0roZVZI7YZL3bLTQac&ehbc=2E312F"
+          width="640"
+          height="480"
+          title="JZ Chelan Interactive Map"
+        ></iframe>
+      </div>
+    </div>
+  );
+};
+
 const IndexPage = () => {
   return (
     <>
@@ -164,20 +192,13 @@ const IndexPage = () => {
       <main>
         <DetailSection />
         <TravelingSection />
-        <div className="centeredContentContainer">
-          <iframe
-            src="https://www.google.com/maps/d/embed?mid=1OBfjoivIRBO5C0roZVZI7YZL3bLTQac&ehbc=2E312F"
-            width="640"
-            height="480"
-            title="JZ Chelan Interactive Map"
-          ></iframe>
-        </div>
+        <MapSection />
         <div className="centeredContentContainer">
           <img width="60%" src={piggyBackImg} alt="piggyback" />
         </div>
       </main>
       <footer style={borderStyle("green")}>
-        <span className=".preloadMe">Sites by Keegz</span>
+        <p className=".preloadMe">Sites by Keegz</p>
       </footer>
     </>
   );
