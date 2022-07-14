@@ -4,6 +4,11 @@ import piggyBackImg from "../images/piggyback1.jpg";
 import faroutSmallImg from "../images/faroutSmall.jpg";
 import faroutBigImg from "../images/faroutBig.jpg";
 import rioVistaImg from "../images/riovista1.jpeg";
+import img1 from "../images/carousel/IMG_0397.jpg";
+import img2 from "../images/carousel/IMG_0857.jpg";
+import img3 from "../images/carousel/IMG_2855.jpg";
+import img4 from "../images/carousel/IMG_2861.jpg";
+import img5 from "../images/carousel/IMG_5804.jpg";
 
 import "normalize.css";
 import "../styles/app.scss";
@@ -199,6 +204,18 @@ const MapSection = () => {
   );
 };
 
+const PhotoCollage = () => {
+  return (
+    <div className="collageContainer">
+      <img className="collageItem" height="400px" src={img1} alt="image 1" />
+      <img className="collageItem" height="400px" src={img2} alt="image 2" />
+      <img className="collageItem" height="400px" src={img3} alt="image 3" />
+      <img className="collageItem" height="400px" src={img4} alt="image 4" />
+      <img className="collageItem" height="400px" src={img5} alt="image 5" />
+    </div>
+  );
+};
+
 const IndexPage = () => {
   return (
     <>
@@ -224,6 +241,7 @@ const IndexPage = () => {
           We will continue to update this website with more details as they are
           solidified and will send formal invitations closer to.
         </p>
+        <PhotoCollage />
       </main>
       <footer style={borderStyle("green")}>
         <p className=".preloadMe">Sites by Keegz</p>
