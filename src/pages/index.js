@@ -97,6 +97,7 @@ const TravelingSection = () => {
       className="sectionContainer parchmentBackground"
       style={{ paddingTop: "220px" }}
     >
+      <div className="eucalyptusTwo"></div>
       <h1>Traveling</h1>
       <p>
         We can't wait to show you all the reasons we love Chelan! Our favorite
@@ -220,7 +221,7 @@ const TravelingSection = () => {
 
 const MapSection = () => {
   return (
-    <div>
+    <div className="sectionContainer reverseParchmentBackground">
       <p>
         We’ve put together this map to show a few different points of interest
         to help you plan, including our venue, where the Gladstone house is, and
