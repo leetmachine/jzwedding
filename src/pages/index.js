@@ -58,6 +58,17 @@ const TravelingSection = () => {
   return (
     <div style={borderStyle("red")}>
       <h1 id="traveling">Traveling</h1>
+      <p>
+        We can't wait to show you all the reasons we love Chelan! Our favorite
+        little town books up extremely quickly and well in advance, so we
+        recommend booking your accommodations as soon as you're able to.
+      </p>
+      <p>
+        There are a ton of options available, most of which can also be found on
+        your favorite booking sites (booking.com, expedia.com, etc). We have
+        found some of the most budget friendly options to be renting a house in
+        the area with friends or family!
+      </p>
       <div>
         <h2>Flying In</h2>
         <p>
@@ -203,11 +214,15 @@ const IndexPage = () => {
         <div className="centeredContentContainer">
           <img width="60%" src={piggyBackImg} alt="piggyback" />
         </div>
-        <p style={{ color: "red", fontWeight: "bold" }}>
-          We should add a sentimental blurb here like "We are so excited to
-          share this special moment with you...." and possibly a point of
-          contact for needs. like "Please reach out to Michelle or Sherry with
-          questions..."{" "}
+        <p>
+          We are incredibly excited to share this special celebration in our
+          lives with each of you, in one of our favorite places. If you have any
+          questions as you begin to plan, please drop us a line at
+          jztietheknot2023@gmail.com.
+        </p>
+        <p>
+          We will continue to update this website with more details as they are
+          solidified and will send formal invitations closer to.
         </p>
       </main>
       <footer style={borderStyle("green")}>
