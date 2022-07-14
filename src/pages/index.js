@@ -1,8 +1,9 @@
 import * as React from "react";
 
+import Head from "../components/Head";
+
 import piggyBackImg from "../images/piggyback1.jpg";
-import faroutSmallImg from "../images/faroutSmall.jpg";
-import faroutBigImg from "../images/faroutBig.jpg";
+
 import rioVistaImg from "../images/riovista1.jpeg";
 import img1 from "../images/carousel/IMG_0397.jpg";
 import img2 from "../images/carousel/IMG_0857.jpg";
@@ -21,7 +22,7 @@ const borderStyle = (color) => {
 // markup
 const Header = () => {
   return (
-    <header style={borderStyle("blue")}>
+    <header>
       <ul>
         <li>
           <a href="#home">HOME</a>
@@ -39,21 +40,29 @@ const Header = () => {
 
 const DetailSection = () => {
   return (
-    <div className="sectionContainer" style={borderStyle("purple")}>
-      <div>
-        <h1 id="details">Wedding Details</h1>
-        <h2>Venue</h2>
-        <h3>Rio Vista Wines</h3>
-        <a href="http://riovistawines.com">Rio Vista Wines Website</a>
-        <p>address: 24415 SR 97, Chelan, WA 98816</p>
-        <img src={rioVistaImg} alt="rio vista wines" />
-        <p>
-          Our celebrations will be held at Rio Vista Wines on August 12, 2023.
-          The venue is about 10 miles out of Downtown Chelan, or a 15-minute
-          drive. There will be parking available onsite for those who choose to
-          drive, and we will be sharing information about shuttles as details
-          become available.
-        </p>
+    <div id="details" className="sectionContainer">
+      <h1>Wedding Details</h1>
+      <div className="twoColumns">
+        <div className="column rioVistaColumn">
+          <h2>Venue</h2>
+          <h3>Rio Vista Wines</h3>
+          <a href="http://riovistawines.com">Rio Vista Wines Website</a>
+          <p>address: 24415 SR 97, Chelan, WA 98816</p>
+          <p className="rioVistaText">
+            Our celebrations will be held at Rio Vista Wines on August 12, 2023.
+            The venue is about 10 miles out of Downtown Chelan, or a 15-minute
+            drive. There will be parking available onsite for those who choose
+            to drive, and we will be sharing information about shuttles as
+            details become available.
+          </p>
+        </div>
+        <div className="column">
+          <img
+            src={rioVistaImg}
+            className="rioVistaImg"
+            alt="rio vista wines"
+          />
+        </div>
       </div>
     </div>
   );
@@ -61,8 +70,8 @@ const DetailSection = () => {
 
 const TravelingSection = () => {
   return (
-    <div style={borderStyle("red")}>
-      <h1 id="traveling">Traveling</h1>
+    <div id="traveling" className="sectionContainer">
+      <h1>Traveling</h1>
       <p>
         We can't wait to show you all the reasons we love Chelan! Our favorite
         little town books up extremely quickly and well in advance, so we
@@ -219,9 +228,7 @@ const PhotoCollage = () => {
 const IndexPage = () => {
   return (
     <>
-      <title>Jenessa & Zach</title>
-      <link rel="preload" as="image" href={faroutSmallImg} />
-      <link rel="preload" as="image" href={faroutBigImg} />
+      <Head />
       <Header />
       <div id="home" className="backgroundImg"></div>
       <main>

@@ -1,7 +1,12 @@
+$bgColor: rgba(255, 250, 255, .8);
+$aColor: #333;
+
 header {
     position: fixed;
     width: 100vw;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: $bgColor;
+    border: 2px solid rgba(255, 250, 255);
+    box-shadow: #333;
 
     ul {
         list-style: none;
@@ -11,5 +16,11 @@ header {
 
     li {
         text-transform: uppercase;
+    }
+
+    a {
+        color: $aColor;
+        text-decoration: none;
+        font-size: 1.15em;
     }
 }

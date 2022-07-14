@@ -1,11 +1,30 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Albert Sans', sans-serif;
     color: #333;
 }
 
 main {
     padding-left: 1.5em;
     padding-right: 1.5em;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.rioVistaText {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.rioVistaImg {
+    width: 100%;
+}
+
+.sectionContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    text-align: center;
 }
 
 .centeredContentContainer {
@@ -33,6 +52,8 @@ main {
     padding: .25em .5em .25em .55em;
 }
 
+@media only screen and (min-width: 768px) {}
+
 @media only screen and (min-width: 1000px) {
     .backgroundImg {
         background: url('../images/faroutBig.jpg') no-repeat center center;
@@ -43,4 +64,16 @@ main {
         background-size: cover;
         height: 100vh;
     }
+
+    .twoColumns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .column {
+        flex: 50%;
+        padding: 0 .5em 0 .5em;
+    }
+
 }
