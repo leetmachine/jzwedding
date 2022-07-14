@@ -92,7 +92,11 @@ const DetailSection = () => {
 
 const TravelingSection = () => {
   return (
-    <div id="traveling" className="sectionContainer">
+    <div
+      id="traveling"
+      className="sectionContainer parchmentBackground"
+      style={{ paddingTop: "220px" }}
+    >
       <h1>Traveling</h1>
       <p>
         We can't wait to show you all the reasons we love Chelan! Our favorite
