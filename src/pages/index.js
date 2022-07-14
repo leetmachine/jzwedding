@@ -1,4 +1,7 @@
 import * as React from "react";
+import { IoMapOutline } from "@react-icons/all-files/io5/IoMapOutline";
+import { IoGlobeOutline } from "@react-icons/all-files/io5/IoGlobeOutline";
+import {} from "@react-icons/all-files/";
 
 import Head from "../components/Head";
 
@@ -41,13 +44,32 @@ const Header = () => {
 const DetailSection = () => {
   return (
     <div id="details" className="sectionContainer">
+      <div className="botanicalVectorOne"></div>
       <h1>Wedding Details</h1>
       <div className="twoColumns">
         <div className="column rioVistaColumn">
           <h2>Venue</h2>
           <h3>Rio Vista Wines</h3>
-          <a href="http://riovistawines.com">Rio Vista Wines Website</a>
-          <p>address: 24415 SR 97, Chelan, WA 98816</p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              maxWidth: "80%",
+              margin: "0 auto",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <IoGlobeOutline size={"1.5em"} />
+              <a href="http://riovistawines.com">Rio Vista Website</a>
+            </div>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <IoMapOutline size={"1.5em"} />
+              <span style={{ paddingLeft: "10px" }}>
+                24415 SR 97, Chelan, WA 98816
+              </span>
+            </div>
+          </div>
           <p className="rioVistaText">
             Our celebrations will be held at Rio Vista Wines on August 12, 2023.
             The venue is about 10 miles out of Downtown Chelan, or a 15-minute
