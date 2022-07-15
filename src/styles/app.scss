@@ -62,7 +62,7 @@ img {
 .sectionContainer {
     width: 100%;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 110px;
     text-align: center;
     // max-width: 1800px;
     margin: 0 auto;
@@ -83,7 +83,7 @@ img {
     transform: scaleX(-1) scaleY(-1);
     position: absolute;
     left: -24px;
-    margin-top: -80px;
+    margin-top: -132px;
     opacity: 15%;
 
 }
@@ -129,8 +129,13 @@ img {
 }
 
 @media only screen and (min-width: 500px) {
+    .sectionContainer {
+        padding-top: 60px;
+    }
+
     .botanicalVectorOne {
         width: 500px;
+        margin-top: -80px;
     }
 }
 
