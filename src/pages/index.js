@@ -300,7 +300,15 @@ const JandZStuff = () => {
         solidified and will send formal invitations in the coming months.
       </p>
       <PhotoCollage />
-      <h1 style={{ margin: "2em", letterSpacing: ".05em" }}>#JZTieTheKnot</h1>
+      <h1
+        style={{
+          marginTop: "2em",
+          marginBottom: "2em",
+          letterSpacing: ".05em",
+        }}
+      >
+        #JZTieTheKnot
+      </h1>
     </div>
   );
 };

@@ -10,9 +10,9 @@ const Head = () => {
             <Title>Jenessa & Zach</Title>
             <Link rel="preload" as="image" href={faroutSmallImg} />
             <Link rel="preload" as="image" href={faroutBigImg} />
-            <style>
+            {/* <style>
                 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Birthstone+Bounce&display=swap');
-            </style>
+            </style> */}
       </>
     )
 }
