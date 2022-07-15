@@ -3,9 +3,44 @@ body {
     color: #333;
 }
 
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #fcf5e5;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+
+}
+
 h1 {
     font-family: 'Birthstone Bounce', cursive;
     font-size: 3em;
+}
+
+h2 {
+    margin-top: 3em;
+}
+
+p {
+    font-size: 1.10em;
+    text-align: justify;
+    padding: .5em 1.25em .5em 1.25em;
+    line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+iframe {
+    width: 80vw;
+    max-width: 1800px;
+}
+
+.whiteFlower {
+    transform: rotate(-10deg);
 }
 
 .rioVistaText {
@@ -57,8 +92,8 @@ h1 {
     position: absolute;
     right: 0;
     margin-top: 50px;
-    margin-right: -200px;
-    opacity: 35%;
+    margin-right: -150px;
+    opacity: 28%;
 }
 
 .centeredContentContainer {
@@ -83,7 +118,8 @@ h1 {
 }
 
 .collageItem {
-    padding: .25em .5em .25em .55em;
+    margin: .25em .5em .25em .55em;
+    border-radius: 10px;
 }
 
 @media only screen and (min-width: 768px) {}
@@ -103,6 +139,8 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 1800px;
+        margin: 0 auto;
     }
 
     .column {

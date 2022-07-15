@@ -5,6 +5,7 @@ import {} from "@react-icons/all-files/";
 
 import Head from "../components/Head";
 
+import whiteFlowerImg from "../images/vectors/whiteFlower.png";
 import piggyBackImg from "../images/piggyback1.jpg";
 
 import rioVistaImg from "../images/riovista1.jpeg";
@@ -17,10 +18,6 @@ import img5 from "../images/carousel/IMG_5804.jpg";
 import "normalize.css";
 import "../styles/app.scss";
 import "../styles/header.scss";
-
-const borderStyle = (color) => {
-  return { border: `2px solid ${color}` };
-};
 
 // markup
 const Header = () => {
@@ -36,6 +33,9 @@ const Header = () => {
         <li>
           <a href="#traveling">TRAVELING</a>
         </li>
+        <li>
+          <a href="#jz">J&Z</a>
+        </li>
       </ul>
     </header>
   );
@@ -45,10 +45,19 @@ const DetailSection = () => {
   return (
     <div id="details" className="sectionContainer">
       <div className="botanicalVectorOne"></div>
-      <h1>Wedding Details</h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img height="100px" src={whiteFlowerImg} className="whiteFlower" />
+        <h1>Wedding Details</h1>
+      </div>
       <div className="twoColumns">
         <div className="column rioVistaColumn">
-          <h2>Venue</h2>
+          <h2 style={{ marginTop: 0 }}>Venue</h2>
           <h3>Rio Vista Wines</h3>
           <div
             style={{
@@ -95,10 +104,19 @@ const TravelingSection = () => {
     <div
       id="traveling"
       className="sectionContainer parchmentBackground"
-      style={{ paddingTop: "220px" }}
+      // style={{ paddingTop: "220px" }}
     >
       <div className="eucalyptusTwo"></div>
-      <h1>Traveling</h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img height="100px" src={whiteFlowerImg} className="whiteFlower" />
+        <h1>Traveling</h1>
+      </div>
       <p>
         We can't wait to show you all the reasons we love Chelan! Our favorite
         little town books up extremely quickly and well in advance, so we
@@ -222,6 +240,16 @@ const TravelingSection = () => {
 const MapSection = () => {
   return (
     <div className="sectionContainer reverseParchmentBackground">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img height="100px" src={whiteFlowerImg} className="whiteFlower" />
+        <h1>Points of Interest</h1>
+      </div>
       <p>
         We’ve put together this map to show a few different points of interest
         to help you plan, including our venue, where the Gladstone house is, and
@@ -236,6 +264,43 @@ const MapSection = () => {
           title="JZ Chelan Interactive Map"
         ></iframe>
       </div>
+    </div>
+  );
+};
+
+const JandZStuff = () => {
+  return (
+    <div id="jz" className="sectionContainer">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img height="100px" src={whiteFlowerImg} className="whiteFlower" />
+        <h1>J & Z</h1>
+      </div>
+      <div className="centeredContentContainer">
+        <img
+          style={{ borderRadius: "10px", maxWidth: "800px" }}
+          width="60%"
+          src={piggyBackImg}
+          alt="piggyback"
+        />
+      </div>
+      <p>
+        We are incredibly excited to share this special celebration in our lives
+        with each of you, in one of our favorite places. If you have any
+        questions as you begin to plan, please drop us a line at
+        jztietheknot2023@gmail.com.
+      </p>
+      <p>
+        We will continue to update this website with more details as they are
+        solidified and will send formal invitations in the coming months.
+      </p>
+      <PhotoCollage />
+      <h1 style={{ margin: "2em", letterSpacing: ".05em" }}>#JZTieTheKnot</h1>
     </div>
   );
 };
@@ -262,23 +327,11 @@ const IndexPage = () => {
         <DetailSection />
         <TravelingSection />
         <MapSection />
-        <div className="centeredContentContainer">
-          <img width="60%" src={piggyBackImg} alt="piggyback" />
-        </div>
-        <p>
-          We are incredibly excited to share this special celebration in our
-          lives with each of you, in one of our favorite places. If you have any
-          questions as you begin to plan, please drop us a line at
-          jztietheknot2023@gmail.com.
-        </p>
-        <p>
-          We will continue to update this website with more details as they are
-          solidified and will send formal invitations closer to.
-        </p>
-        <PhotoCollage />
+        <JandZStuff />
       </main>
-      <footer style={borderStyle("green")}>
-        <p className=".preloadMe">Sites by Keegz</p>
+      <footer>
+        <span>&copy; 2022</span>
+        <p>vector graphics attributed to their rightful owners</p>
       </footer>
     </>
   );
