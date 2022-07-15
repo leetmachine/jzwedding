@@ -19,7 +19,10 @@ footer p {
 h1 {
     font-family: 'Birthstone Bounce', cursive;
     font-size: 3em;
+    width: min-content;
+    min-width: 125px;
 }
+
 
 h2 {
     margin-top: 3em;

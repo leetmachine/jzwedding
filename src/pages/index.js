@@ -305,6 +305,7 @@ const JandZStuff = () => {
           marginTop: "2em",
           marginBottom: "2em",
           letterSpacing: ".05em",
+          width: "auto",
         }}
       >
         #JZTieTheKnot
