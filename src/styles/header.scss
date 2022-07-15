@@ -12,17 +12,30 @@ header {
     ul {
         list-style: none;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        max-width: 2000px;
+        margin: 0 auto;
     }
 
     li {
+        flex-basis: 50%;
         text-transform: uppercase;
+        padding: 1em 0 1em 0;
     }
 
     a {
         color: $aColor;
         text-decoration: none;
         font-size: 1.15em;
+    }
+
+    @media only screen and (min-width: 500px) {
+        li {
+            flex-basis: auto;
+        }
     }
 }
