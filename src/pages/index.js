@@ -253,8 +253,7 @@ const MapSection = () => {
       <p>
         We’ve put together this map to show a few different points of interest
         to help you plan, including our venue, where the Gladstone house is, and
-        how far down the lake we recommend staying. Click on each pin to see
-        details.
+        the furthest point down the lake we recommend staying.
       </p>
       <div className="centeredContentContainer">
         <iframe
