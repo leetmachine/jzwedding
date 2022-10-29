@@ -145,13 +145,25 @@ const TravelingSection = () => {
       </div>
       <h2>Hotels</h2>
       <div>
+        <h3>Room Blocks Available</h3>
+        <p>
+          We have arranged for room blocks at the following two hotels under
+          "Gladstone/Crippen Wedding Lodging"
+        </p>
+        <div>
+          <p>
+            Cambells Resort: please call 1-800-553-8225. Group reservation
+            #715162
+          </p>
+          <p>
+            Midtowner Motel: please call 1-800-572-0943. Group reservation
+            #727008
+          </p>
+        </div>
+
         <h3>Campbells Resort</h3>
         <a href="https://campbellsresort.com/">Cambells Resort Website</a>
-        <p>
-          We will be securing a small block of hotel rooms at Campbell's later
-          on this year. If this is the spot that catches your attention, please
-          check back on October 1 for discount details.{" "}
-        </p>
+        <p>Group reservation details listed above.</p>
         <p>
           Fun fact - Jenessa worked at Campbells for one summer in college!{" "}
         </p>
@@ -183,11 +195,16 @@ const TravelingSection = () => {
 
       <h2>Motels</h2>
       <div>
+        <h3></h3>
         <h3>Riverwalk Inn & Cafe</h3>
         <a href="https://riverwalkinnchelan.com/">
           River Walk Inn – Inn and Motel and Lake Chelan
           (riverwalkinnchelan.com)
         </a>
+      </div>
+      <div>
+        <h3>Midtowner Motel</h3>
+        <a href="https://midtowner.com/">Midtowner Motel at Lake Chelan</a>
       </div>
       <div>
         <h3>Apple Inn Motel</h3>
