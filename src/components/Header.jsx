@@ -21,7 +21,7 @@ const Nav = ({ onClick = () => {} }) => (
       <a href="/registry">REGISTRY</a>
     </li> */}
     <li>
-      <a href="#jz">J&Z</a>
+      <a href="/#jz">J&Z</a>
     </li>
   </ul>
 );

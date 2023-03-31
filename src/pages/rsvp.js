@@ -17,7 +17,7 @@ const RsvpPage = () => {
     attending: "",
     number: "0",
   });
-  const [submitted, onSubmitted] = useState(true);
+  const [submitted, onSubmitted] = useState(false);
 
   function onSubmitRsvp(e) {
     e.preventDefault();
