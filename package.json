@@ -23,6 +23,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-form-elements": "^4.14.1",
     "react-head": "^3.4.0",
     "react-icons": "^4.8.0",
     "sass": "^1.53.0"

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Head from "../components/Head";
 import Header from "../components/Header";
 
-import "../styles/rsvp.scss";
-
 const FaqsPage = () => {
   const [submitted, onSubmitted] = useState(true);
 
