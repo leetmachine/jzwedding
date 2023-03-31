@@ -26,6 +26,9 @@ const Nav = ({ onClick = () => {} }) => (
   </ul>
 );
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined";
+
 const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,8 +38,10 @@ const MobileHeader = () => {
       setIsOpen(false);
     }
 
-    window.addEventListener("hashchange", closeMobileHeader);
-    return () => window.removeEventListener("hashchange", closeMobileHeader);
+    if (isBrowser) {
+      window.addEventListener("hashchange", closeMobileHeader);
+      return () => window.removeEventListener("hashchange", closeMobileHeader);
+    }
   }, []);
 
   return (
@@ -60,8 +65,11 @@ const DesktopHeader = () => {
     </div>
   );
 };
+
 const Header = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1000);
+  const [isDesktop, setIsDesktop] = useState(
+    isBrowser ? window.innerWidth > 1000 : false
+  );
 
   useEffect(() => {
     function setDesktop() {
@@ -69,8 +77,10 @@ const Header = () => {
       setIsDesktop(window.innerWidth > 1000);
     }
 
-    window.addEventListener("resize", setDesktop);
-    return () => window.removeEventListener("resize", setDesktop);
+    if (isBrowser) {
+      window.addEventListener("resize", setDesktop);
+      return () => window.removeEventListener("resize", setDesktop);
+    }
   }, []);
 
   return <header>{isDesktop ? <DesktopHeader /> : <MobileHeader />}</header>;
