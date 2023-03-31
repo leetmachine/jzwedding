@@ -1,0 +1,52 @@
+.rsvpContainer {
+  padding-top: 150px;
+}
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 3 3 3 black;
+  max-width: 450px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.formHeading {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.formRow {
+  margin-bottom: 12px;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+form {
+  padding: 25px;
+  height: 100%;
+}
+
+.formLabel {
+  margin-right: 12px;
+}
+
+.textInput {
+  width: 100%;
+}
+
+.submitButton {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: px;
+}
+
+.thankYouText {
+  text-align: center;
+  padding-top: 20px;
+}

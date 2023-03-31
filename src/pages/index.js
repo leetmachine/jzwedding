@@ -4,6 +4,7 @@ import { IoGlobeOutline } from "@react-icons/all-files/io5/IoGlobeOutline";
 import {} from "@react-icons/all-files/";
 
 import Head from "../components/Head";
+import Header from "../components/Header";
 
 import whiteFlowerImg from "../images/vectors/whiteFlower.png";
 import piggyBackImg from "../images/piggyback1.jpg";
@@ -17,29 +18,6 @@ import img5 from "../images/carousel/IMG_5804.jpg";
 
 import "normalize.css";
 import "../styles/app.scss";
-import "../styles/header.scss";
-
-// markup
-const Header = () => {
-  return (
-    <header>
-      <ul>
-        <li>
-          <a href="#home">HOME</a>
-        </li>
-        <li>
-          <a href="#details">WEDDING DETAILS</a>
-        </li>
-        <li>
-          <a href="#traveling">TRAVELING</a>
-        </li>
-        <li>
-          <a href="#jz">J&Z</a>
-        </li>
-      </ul>
-    </header>
-  );
-};
 
 const DetailSection = () => {
   return (
@@ -283,7 +261,6 @@ const MapSection = () => {
     </div>
   );
 };
-
 const JandZStuff = () => {
   return (
     <div id="jz" className="sectionContainer">
