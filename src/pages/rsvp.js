@@ -121,9 +121,10 @@ const RsvpPage = () => {
                       onChange={({ target }) => onChange(target, "attending")}
                     />
                   </div>
+                  <input type="hidden" name="attendingCount" />
                   {form.attending === "yes" && (
                     <>
-                      <label htmlFor="attendingCount">Number in Party</label>
+                      <label htmlFor="attendingCount[]">Number in Party</label>
                       <span>(Please refer to your invite)</span>
                       <Select
                         options={[
