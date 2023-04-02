@@ -73,7 +73,6 @@ const Header = () => {
 
   useEffect(() => {
     function setDesktop() {
-      console.log("innerWidth", window.innerWidth);
       setIsDesktop(window.innerWidth > 1000);
     }
 
