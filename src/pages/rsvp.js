@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BeatLoader } from "react-spinners";
 import Head from "../components/Head";
 import Header from "../components/Header";
 
@@ -12,19 +13,35 @@ const AfterSubmitted = () => (
 
 const RsvpPage = () => {
   const [form, setForm] = useState({
+    "form-name": "rsvpForm",
     firstName: "",
     lastName: "",
     attending: "",
     number: "0",
   });
+  const [loading, setIsLoading] = useState(false);
   const [submitted, onSubmitted] = useState(false);
 
   function onSubmitRsvp(e) {
     e.preventDefault();
+    setIsLoading(true);
 
     console.log(form);
 
-    onSubmitted(true);
+    fetch("/rsvp", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(form).toString(),
+    })
+      .then(() => {
+        setIsLoading(false);
+        onSubmitted(true);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log("oops something went wrong.");
+        console.log(err);
+      });
   }
 
   function onChange(target, key) {
@@ -41,12 +58,19 @@ const RsvpPage = () => {
       <main className="backgroundImg fixed">
         <div className="contentContainer">
           <div className="mainContent formBox">
+            <BeatLoader loading={loading} />
             {submitted ? (
               <AfterSubmitted />
             ) : (
               <div className="formWrapper">
                 <h1>RSVP</h1>
-                <form onSubmit={onSubmitRsvp}>
+                <form
+                  name="rsvpForm"
+                  method="post"
+                  onSubmit={onSubmitRsvp}
+                  data-netlify="true"
+                >
+                  <input type="hidden" name="form-name" value="rsvpForm" />
                   <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
@@ -85,6 +109,7 @@ const RsvpPage = () => {
                   {form.attending === "yes" && (
                     <>
                       <label htmlFor="number">Number in Party</label>
+                      <span>(Please refer to invite)</span>
                       <select
                         name="number"
                         value={form.number}
