@@ -27,12 +27,13 @@ const RsvpPage = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    console.log(form);
+    const formData = new URLSearchParams(form).toString();
+    console.log("formData", formData);
 
     fetch("/rsvp", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(form).toString(),
+      body: formData,
     })
       .then(() => {
         setIsLoading(false);

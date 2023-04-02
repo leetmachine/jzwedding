@@ -332,6 +332,12 @@ const IndexPage = () => {
         <JandZStuff />
       </main>
       <footer>
+        <p>
+          We are incredibly excited to share this special celebration in our
+          lives with each of you, in one of our favorite places. If you have any
+          questions as you begin to plan, please drop us a line at
+        </p>
+        <span>jztietheknot2023@gmail.com</span>
         <span>&copy; 2022</span>
         <p>vector graphics attributed to their rightful owners</p>
       </footer>
