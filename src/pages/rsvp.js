@@ -134,7 +134,7 @@ const RsvpPage = () => {
                           { label: "5", value: "5" },
                           { label: "6", value: "6" },
                         ]}
-                        name="attendingCount"
+                        name="attendingCount[]"
                         onChange={(option) =>
                           onChange(option, "attendingCount")
                         }
