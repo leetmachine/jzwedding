@@ -14,7 +14,7 @@ const AfterSubmitted = () => (
 
 const RsvpPage = () => {
   const [form, setForm] = useState({
-    "form-name": "rsvpForm",
+    "form-name": "guestRsvpForm",
     firstName: "",
     lastName: "",
     attending: "",
@@ -73,7 +73,7 @@ const RsvpPage = () => {
               <div className="formWrapper">
                 <h1>RSVP</h1>
                 <form
-                  name="rsvpForm"
+                  name="guestRsvpForm"
                   method="post"
                   onSubmit={onSubmitRsvp}
                   data-netlify="true"
@@ -85,7 +85,7 @@ const RsvpPage = () => {
                     onChange={({ target }) => onChange(target, "botField")}
                     style={{ visibility: "hidden", height: 0 }}
                   />
-                  <input type="hidden" name="form-name" value="rsvpForm" />
+                  <input type="hidden" name="form-name" value="guestRsvpForm" />
                   <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
