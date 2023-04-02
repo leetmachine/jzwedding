@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BeatLoader } from "react-spinners";
+import Select from "react-select";
 import Head from "../components/Head";
 import Header from "../components/Header";
 
@@ -17,7 +18,7 @@ const RsvpPage = () => {
     firstName: "",
     lastName: "",
     attending: "",
-    number: "0",
+    number: "",
   });
   const [loading, setIsLoading] = useState(false);
   const [submitted, onSubmitted] = useState(false);
@@ -51,14 +52,20 @@ const RsvpPage = () => {
     setForm({ ...form, [key]: target.value });
   }
 
+  const isButtonDisabled = Object.keys(form).find(
+    (key) => form[key] === undefined || form[key] === null || form[key] === ""
+  );
+
   return (
     <>
       <Head />
       <Header />
       <main className="backgroundImg fixed">
-        <div className="contentContainer">
+        <div className="contentContainer" style={{ marginBottom: "10em" }}>
           <div className="mainContent formBox">
-            <BeatLoader loading={loading} />
+            <div className="loader">
+              <BeatLoader loading={loading} />
+            </div>
             {submitted ? (
               <AfterSubmitted />
             ) : (
@@ -69,7 +76,14 @@ const RsvpPage = () => {
                   method="post"
                   onSubmit={onSubmitRsvp}
                   data-netlify="true"
+                  netlify-honeypot="botField"
                 >
+                  <input
+                    name="botField"
+                    value={form.botField}
+                    onChange={({ target }) => onChange(target, "botField")}
+                    style={{ visibility: "hidden", height: 0 }}
+                  />
                   <input type="hidden" name="form-name" value="rsvpForm" />
                   <label htmlFor="firstName">First Name</label>
                   <input
@@ -109,22 +123,28 @@ const RsvpPage = () => {
                   {form.attending === "yes" && (
                     <>
                       <label htmlFor="number">Number in Party</label>
-                      <span>(Please refer to invite)</span>
-                      <select
+                      <span>(Please refer to your invite)</span>
+                      <Select
+                        options={[
+                          { label: "1", value: 1 },
+                          { label: "2", value: 2 },
+                          { label: "3", value: 3 },
+                          { label: "4", value: 4 },
+                          { label: "5", value: 5 },
+                          { label: "6", value: 6 },
+                        ]}
                         name="number"
-                        value={form.number}
-                        onChange={({ target }) => onChange(target, "number")}
-                      >
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                      </select>
+                        onChange={(option) => onChange(option, "number")}
+                      />
                     </>
                   )}
-                  <button type="submit">RSVP</button>
+                  <button
+                    type="submit"
+                    disabled={isButtonDisabled}
+                    className="submitButton"
+                  >
+                    {isButtonDisabled ? "Please complete the form" : "RSVP"}
+                  </button>
                 </form>
               </div>
             )}
