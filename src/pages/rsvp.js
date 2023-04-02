@@ -18,7 +18,7 @@ const RsvpPage = () => {
     firstName: "",
     lastName: "",
     attending: "",
-    number: "",
+    attendingCount: "",
   });
   const [loading, setIsLoading] = useState(false);
   const [submitted, onSubmitted] = useState(false);
@@ -48,7 +48,7 @@ const RsvpPage = () => {
 
   function onChange(target, key) {
     if (key === "attending" && target.value === "no") {
-      return setForm({ ...form, [key]: target.value, number: "0" });
+      return setForm({ ...form, [key]: target.value, attendingCount: "0" });
     }
     setForm({ ...form, [key]: target.value });
   }
@@ -123,7 +123,7 @@ const RsvpPage = () => {
                   </div>
                   {form.attending === "yes" && (
                     <>
-                      <label htmlFor="number">Number in Party</label>
+                      <label htmlFor="attendingCount">Number in Party</label>
                       <span>(Please refer to your invite)</span>
                       <Select
                         options={[
@@ -134,8 +134,10 @@ const RsvpPage = () => {
                           { label: "5", value: "5" },
                           { label: "6", value: "6" },
                         ]}
-                        name="number"
-                        onChange={(option) => onChange(option, "number")}
+                        name="attendingCount"
+                        onChange={(option) =>
+                          onChange(option, "attendingCount")
+                        }
                       />
                     </>
                   )}
