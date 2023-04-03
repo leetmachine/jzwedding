@@ -14,10 +14,10 @@ const Nav = ({ onClick = () => {} }) => (
     <li>
       <a href="/faqs">FAQ's</a>
     </li>
-    {/* <li>
+    <li>
       <a href="/rsvp">RSVP</a>
     </li>
-    <li>
+    {/*<li>
       <a href="/registry">REGISTRY</a>
     </li> */}
     <li>
