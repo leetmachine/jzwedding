@@ -1,0 +1,46 @@
+h2 {
+  margin-top: 12px;
+}
+
+.itemGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 40rem) {
+  .gridItem {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .gridItem {
+    width: 25%;
+  }
+}
+
+.gridItem {
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 100px;
+  text-align: center;
+  margin: 8px;
+}
+
+.itemTitle {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px !important;
+}
+
+.itemAmount {
+  font-family: "Birthstone Bounce", cursive;
+  font-size: 3em;
+  line-height: 1;
+  margin-top: 0px !important;
+
+  &:before {
+    content: "$";
+  }
+}
