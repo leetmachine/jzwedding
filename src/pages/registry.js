@@ -6,23 +6,23 @@ import "../styles/registry.scss";
 
 const items = [
   { title: "Flights to Europe", amount: 2000 },
-  { title: "Guiness Factory Tour", amount: 100 },
-  { title: "One night at a B&B in Ireland", amount: 250 },
   { title: "Train from London to Brussels", amount: 500 },
   { title: "Wine tasting in France", amount: 300 },
-  { title: "Dinner out in Glasgow", amount: 150 },
-  { title: "Morning coffee in Amsterdam", amount: 50 },
+  { title: "Evening canal tour in Amsterdam", amount: 300 },
+  { title: "One night at a B&B in Ireland", amount: 250 },
+  { title: "One hotel night in Glasgow", amount: 250 },
+  { title: "Glasgow distillery tour", amount: 200 },
   { title: "Tickets to a Broadway show in NYC", amount: 150 },
+  { title: "Dinner out in Glasgow", amount: 150 },
+  { title: "Guiness Factory Tour", amount: 100 },
   { title: "Tickets to European soccer match", amount: 100 },
+  { title: "Tickets to the Eiffel Tower", amount: 100 },
+  { title: "Morning coffee in Amsterdam", amount: 50 },
   { title: "Drinks on a rooftop patio", amount: 50 },
   { title: "Daily car rental to adventure in Ireland", amount: 50 },
-  { title: "Tickets to the Eiffel Tower", amount: 100 },
   { title: "A picnic and bottle of wine in Paris", amount: 50 },
   { title: "Tickets to the Louvre", amount: 50 },
   { title: "A couple of pints in Belfast", amount: 20 },
-  { title: "One hotel night in Glasgow", amount: 250 },
-  { title: "Glasgow distillery tour", amount: 200 },
-  { title: "Evening canal tour in Amsterdam", amount: 300 },
 ];
 
 const RegistryPage = () => {
