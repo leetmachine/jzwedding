@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "../components/Head";
 import Header from "../components/Header";
 
 const FaqsPage = () => {
-  const [submitted, onSubmitted] = useState(true);
-
-  function onSubmitRsvp(e) {
-    e.preventDefault();
-
-    onSubmitted(true);
-  }
-
   return (
     <>
       <Head />
@@ -52,6 +44,10 @@ const FaqsPage = () => {
             </span>
             <h3>How do I get to the venue?</h3>
             <span>
+              **We are working on a few shuttles and will update with
+              information once the details are confirmed!
+            </span>
+            <span>
               While our venue is a bit out of town, there are multiple ways to
               get there! If you plan to drive yourself, there will be parking
               onsite (please be responsible - no drinking and driving!). If you
@@ -60,8 +56,8 @@ const FaqsPage = () => {
             </span>
             <h3>What time should I plan to arrive?</h3>
             <span>
-              Our ceremony start at 5pm sharp, so we ask all guests plan to
-              arrive by 4:30pm.
+              Our ceremony start at 5:30pm sharp, we ask all guests to please
+              arrive by 5pm.
             </span>
             <h3>Will there be vegan/vegetarian/special diet options?</h3>
             <span>
