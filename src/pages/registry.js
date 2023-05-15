@@ -44,13 +44,17 @@ const RegistryPage = () => {
 
             <h2>Canadian Guests:</h2>
             <span>
-              Donations can be made via e-transfer to jztietheknot@gmail.com!
-              Feel free to include the item title!
+              Donations can be made via e-transfer to
+              jztietheknot2023@gmail.com! Feel free to include an item from
+              below in the title so we know exactly what to thank you for!
             </span>
 
             <h2>Us Guests:</h2>
             <span>
-              We will update this shortly with our preferred donation method.
+              Donations can be made via Zelle Pay to jztietheknot2023@gmail.com!
+              It may warn you the account belongs to "Keegan", that is okay, and
+              is Jenessa's brother!. Feel free to include an item from below in
+              the title so we know exactly what to thank you for!
             </span>
 
             <h1>Honeymoon Fund!</h1>
