@@ -49,7 +49,7 @@ const RegistryPage = () => {
               below in the title so we know exactly what to thank you for!
             </span>
 
-            <h2>Us Guests:</h2>
+            <h2>US Guests:</h2>
             <span>
               Donations can be made via Zelle Pay to jztietheknot2023@gmail.com!
               It may warn you the account belongs to "Keegan", that is okay, and
