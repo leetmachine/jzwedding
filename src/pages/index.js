@@ -72,6 +72,28 @@ const DetailSection = () => {
             alt="rio vista wines"
           />
         </div>
+        <div className="column">
+          <h2>Shuttles</h2>
+          <p className="rioVistaText">
+            Shuttle pickup will be at the following locations and times:
+            <p>Campbells between buildings 3 and 4- 3:55pm</p>
+            <p>Lakeside- 4:10pm</p>
+            <p>Midtowner- 4:15pm</p>
+          </p>
+
+          <p className="rioVistaText">
+            At the end of the night:
+            <p>Leaves Rio at 9pm</p>
+            <p>Leaves Rio at 12am</p>
+          </p>
+        </div>
+        <div className="column">
+          <h2>Driving</h2>
+          <p className="rioVistaText">
+            If you're driving, turn right, into the drive way with the decorated
+            mailboxes and sign designating our wedding.
+          </p>
+        </div>
       </div>
     </div>
   );

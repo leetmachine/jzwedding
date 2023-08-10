@@ -50,9 +50,9 @@ const FaqsPage = () => {
             <span>
               While our venue is a bit out of town, there are multiple ways to
               get there! If you plan to drive yourself, there will be parking
-              onsite (please be responsible - no drinking and driving!). If you
-              prefer to leave the driving to someone else, we have set up the
-              following shuttle schedule for the day:
+              onsite (please be responsible - no drinking and driving!). We have
+              added shuttle information to the homepage under the venue details
+              section.
             </span>
             <h3>What time should I plan to arrive?</h3>
             <span>
